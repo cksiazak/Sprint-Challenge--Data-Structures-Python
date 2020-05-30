@@ -17,12 +17,15 @@ duplicates = []  # Return the list of duplicates in this data structure
 
 # init bst with first name
 node = BSTNode(names_1[0])
-# loop through and insert the rest
+# loop through and insert the rest of the names in names_1
 for name in names_1[1:]:
     node.insert(name)
 
+# now loop through second list
 for name in names_2:
+    # if the tree contains the name we're on
     if node.contains(name):
+        # add to duplicates array
         duplicates.append(name)
 
 """
